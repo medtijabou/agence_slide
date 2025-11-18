@@ -76,4 +76,4 @@ Aucune librairie externe n’est utilisée.
 👤 Auteur
 
 Projet réalisé par Boulyou Tijari.
-Contact : mtijari@mstecnologia.fr
+Contact :tijarim7@gmail.com
