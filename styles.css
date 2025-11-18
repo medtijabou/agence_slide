@@ -1,0 +1,191 @@
+/* --- RESET CSS --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+nav {
+  background-color: transparent;
+  padding: 10px;
+  display: flex;
+  justify-content: end;
+}
+
+ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: flex-end;
+  color: white;
+}
+h1{
+  color: aliceblue;
+  font-size: 54px;
+}
+p{
+  color:#0a1a2a;
+  font-size: 18px;
+ background-color: rgba(255, 255, 255, 0.486);
+ border-radius: 15px;
+ padding: 10px;
+ width: 350px;
+}
+/* --- Slider background --- */
+.slider-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* prend tout l’écran */
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+/* La slide active sera visible */
+.slide.active {
+    opacity: 1;
+}
+
+.catalogue{
+  position: fixed;
+  bottom: 140px;
+
+   
+}
+.card{
+
+    width: 150px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.card-all {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: fixed; /* Fixé à l'écran */
+    right: 0px;    /* Distance du bord droit */
+    bottom: 140px;  /* Distance du bas */
+  
+    overflow: hidden; /* Cache les cartes qui dépassent */
+}
+
+
+.discription{
+  position: fixed;
+ bottom: 440px;
+ padding-left: 100px;
+}
+
+.btn{
+ display: flex;
+    gap: 20px;
+    padding: 20px;
+    position: fixed; /* Fixé à l'écran */
+    right: 550px;    /* Distance du bord droit */
+    bottom: 80px;  /* Distance du bas */
+   
+}
+button{
+   width: 15px;
+    height: 15px;
+    border-radius: 50% ;
+    font-weight: bold;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.336)
+
+}
+.card.active {
+  transform: scale(1.2); /* Agrandit légèrement la carte active */
+  opacity: 1; /* S'assure qu'elle est bien visible */
+  border: 1px solid white; /* Bordure pour indiquer la sélection */
+  z-index: 1; /* Passe devant les autres cartes */
+
+
+
+}
+
+.card {
+  opacity: 0.6; /* Les cartes non-actives sont un peu transparentes */
+}
+
+.text-animate {
+  opacity: 0;
+  transform: translateX(-40px);
+  animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
